@@ -50,15 +50,14 @@ padding: 10%;
 }
 
 #form{
-    
     width:50%;
     height:fit-content;
 
 }
 .form-control{
-    width: 70%;
+    width: 50%;
     height: auto;
-    
+    margin-left: 50px;   
 }
 
 #order{ 
@@ -68,6 +67,17 @@ font-size: 4rem;
 #order-paragraph{
 font-size:2rem;
 }
+
+.order-btn{ 
+width:400px;
+height: fit-content;
+font-size:1rem;
+font-weight: bold;
+background-color:orange;
+border-radius: 1rem;
+margin-top: 3%;
+}
+
 .cover-page{
 width: 100vw;
 height:100vh;
@@ -80,8 +90,8 @@ position: center;
 #menu{
 background-color:#000;
 width:100vw;
-height:100vh;
-color:black;
+height:fit-content;
+color:white;
 }
 
 #menu-id{
@@ -92,6 +102,9 @@ color:black;
 .card{
     margin-right:15px;
     border-radius: 20px;
+}
+.card-body{
+    color:black;
 }
 .contact{
     width:100vw;
