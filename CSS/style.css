@@ -1,0 +1,67 @@
+*{
+margin:0;
+padding: 0;
+box-sizing: border-box;
+}
+
+header{
+font-size:2rem ;
+background-color: black;
+}
+.nav{
+    padding: 2%;
+}
+.nav-link{
+color: white;
+}
+
+#pizza-point{
+color:orange;
+padding: 2%;
+}
+
+.content-header{
+color:#fff;
+font-weight: bolder;
+background-color:transparent;
+padding: 10%;
+}
+
+#order{ 
+font-size: 4rem;
+}
+
+#order-paragraph{
+font-size:2rem;
+}
+.cover-page{
+width: 100vw;
+height:100vh;
+background-image:url(./background/pexels-bruno-cantuária-774487.jpg) ;
+background-size: cover;
+display: cover;
+position: center;
+}
+
+#menu{
+background-color:#000;
+width:100vw;
+height:100vh;
+color:black;
+}
+
+#menu-id{
+    color:white;
+    font-size: 3rem;
+    padding: 3%;
+}
+.card{
+    margin-right:15px;
+    border-radius: 20px;
+}
+.contact{
+    width:100vw;
+    height:500px;
+    background-color:orange;
+    color: black;
+}
