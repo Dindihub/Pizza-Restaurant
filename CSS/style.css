@@ -49,17 +49,6 @@ padding: 10%;
     padding-top:3%;
 }
 
-#form{
-    width:50%;
-    height:fit-content;
-
-}
-.form-control{
-    width: 50%;
-    height: auto;
-    margin-left: 50px;   
-}
-
 #order{ 
 font-size: 4rem;
 }
@@ -95,9 +84,9 @@ color:white;
 }
 
 #menu-id{
-    color:white;
+    color:orange;
     font-size: 3rem;
-    padding: 3%;
+    padding: 2%;
 }
 .card{
     margin-right:15px;
@@ -106,6 +95,36 @@ color:white;
 .card-body{
     color:black;
 }
+
+.controls-top{
+    padding: 2%;
+    color: orange;
+}
+
+#order-forms{
+    display: flex; 
+    justify-content: center; 
+    align-content: center;  
+}
+
+#order-form{
+    margin-right: 4%;
+    position: center;
+    
+}
+.form-control{
+    width:500px;
+    height:auto;
+}
+.form-input{
+    width:500px;
+    height:auto;
+    padding: 2%;  
+    border-radius: 10%;
+}
+
+
+
 .contact{
     width:100vw;
     height:500px;
