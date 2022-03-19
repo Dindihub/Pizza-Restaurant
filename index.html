@@ -14,7 +14,8 @@
     <header class="row">
         <h1 class="col-md-6" id="pizza-point">PIZZA POINT</h1>
         <nav class="col-md-6" class="position-absolute top-0 end-0">
-            <ul class="nav justify-content-end">
+            <!-- <span class="navbar-brand navbar-text"> <a href="#"></a>Call us 075000000.</span> -->
+           <ul class="nav justify-content-end">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
@@ -30,15 +31,22 @@
 
     <main class="main">
         <section class="cover-page">
-            <form action="" id="form">
-                <div class="content-header text-center">
-                    <h1 id="order">Start Your Order</h1>
+            <form action="" id="form"> 
+                <div class="content-cover text-center">
+                    <h1 id="order">We Are Crazy About Pizza!</h1>
                     <h3 id="order-paragraph">Get your Favourite Pizza Delivered in 30 minutes!</h3>
                 </div>
                 <div>
-                    <select name="dropdown" id="">
-                        <option value="dropdown"></option>
+                    <select type="dropdown" name="delivery" id="dropdown" class="form-control mb-2">
+                        <option disabled selected value="delivery">Delivery </option>
+                        <option value="Pick-up">Pick-up</option>
                     </select>
+                </div>
+
+                <div>
+                    <label name="address" id="Address" class="form-control">
+                    <input type="text" placeholder="location">
+                    </label>
                 </div>
             </form>
         </section>
