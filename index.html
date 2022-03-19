@@ -33,11 +33,13 @@
             <div class="content-cover text-center">
                 <h1 id="order">We Are Crazy About Pizza!</h1>
                 <h3 id="order-paragraph">Get your Favourite Pizza Delivered in 30 minutes!</h3>
-                <button class="order-btn"><a class="btn btn-orange button floater" href="#order"> Order Now!</a></button>
+                <button class="order-btn"><a class="btn btn-orange button floater" href="#order"> Order
+                        Now!</a></button>
             </div>
         </section>
 
-        <section id="menu"><h1 class="text-center" id="menu-id">Menu</h1>
+        <section id="menu">
+            <h1 class="text-center" id="menu-id">Menu</h1>
             <div class="card-group">
                 <div class="card">
                     <img src="Images/pexels-krisp-cut-1653877.jpg" class="card-img-top" alt="pic">
@@ -62,60 +64,91 @@
                 </div>
             </div>
 
-       <div class="container-fluid order" id="make-order" id="Order">
+            <div class="container-fluid order" id="make-order" id="Order">
                 <div class="order-overlay">
-                  <div class="controls-top text-center">
-                      <h2>Order Here</h2>
-                    <h2>Order your pizza here and we will deliver to your door step!</h2>
-                 </div>
-                    
-                   <div class="row">
-                      <div class="col-sm-5">
-                        <form action="">
+                    <div class="controls-top text-center">
+                        <h2>Order Here</h2>
+                        <h2>Place your pizza order here and we will deliver to your door step!</h2>
+                    </div>
+
+                    <div class="row-col-sm-5" id="order-forms">
+                        <form id="order-form">
                             <label for="select">Select Your Flavor</label><br>
-                            <select class="browser-default custom-select custom-select-md mb-3 name">
-                              <option value="Chicken Tikka">Barbebue Specials</option>
-                              <option value="PeriPeri Pizza">Vegetable specials</option>
-                              <option value="Raspberry Dessert Pizza">Megamix specials</option>
+                            <select id="pizza-name" name="name" class="form-control">
+                                <option value="barbebue specials">Barbebue Specials</option>
+                                <option value="vegetable specials">Vegetable specials</option>
+                                <option value="megamix specials">Megamix specials</option>
                             </select><br>
-                          <label for="select">Select Size</label><br>
-                          <select class="browser-default custom-select custom-select-md mb-3" id="size">
-                            <option selected value="0">Select size here</option>
-                            <option value="large">Large -Ksh. 1500</option>
-                            <option value="medium">Medium -Ksh. 1000</option>
-                            <option value="small">Small -Ksh. 500</option>
-                          </select><br>
-                          <label for="crust">Choose your favorite Crust!</label><br>
-                            <select class="browser-default custom-select custom-select-md mb-3" id="crust">
-                            <option selected value="0">Select your preferred crust!</option>
-                              <option value="Crispy">Crispy -Ksh. 150</option>
-                              <option value="Stuffed">Stuffed - Ksh. 100</option>
-                         </select><br>
-                          <label for="Toppings">Select Your Toppings at sh. 50 each</label><br>
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                              <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage" name="toppings">
-                              <label class="custom-control-label" for="Sausage">Chicken</label>
-                            </div>
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                              <input type="checkbox" class="custom-control-input" id="Bacon" value="Bacon" name="toppings">
-                              <label class="custom-control-label" for="Bacon">Vegetables</label>
-                            </div>
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                              <input type="checkbox" class="custom-control-input" id="Mushrooms" value="Mushrooms" name="toppings">
-                              <label class="custom-control-label" for="Mushrooms">Pineapples</label>
-                            </div>
-                            <br><br>       
+
+                            <label for="select">Select Size</label><br>
+                            <select id="pizza-size" name="size" class="form-control"></select><br>
+                            <label for="crust">Choose your favorite Crust!</label><br>
+
+                            <select id="pizza-crust" name="crust" class="form-control"></select><br>
+                            <button type="submit">Proceed to delivery option</button>
+                            <br><br>
                         </form>
-                    
-    </section>
-            
 
-    
+                        <form action="" class="form-delivery">
+                            <label for="Name">Name</label><br>
+                            <div>
+                                <input type="text" class="form-input" id="customer-name" value="Your Name"
+                                    name="name-input">
+                            </div><br>
+                            <div>
+                                <label for="phonenumber">Phone Number</label><br>
+                                <input type="number" id="phone-number" value="Your Phone Number" class="form-input">
+                            </div><br>
+                            <div>
+                                <label class="order-number-label" for="order" value="NUmber of orders"> Number of
+                                    orders</label><br>
+                                <input type="number" class="form-input" id="order-number" value="Number of orders"
+                                    name="order-number">
+                            </div><br>
+                            <div>
+                                <label for="select"> Delivery Option</label><br>
+                                <select type="select" id="delivery" name="delivery"
+                                    class="form-control">
+                                    <option value="Delivery option">Delivery</option>
+                                    <option value="Pick-up option">Pick-up</option>
+                            </div>
+                        </form>
+                    </div>
 
-    <section id="contact" class="contact">
-            <h1 class="text-center"> Contact Us </h1>
-            <h3> </h3>
+
         </section>
+
+        <section class="container-fluid footer">
+            <div class="row footerItems">
+                <div class="container links">
+                    <a href="https://twitter.com/porridgelaugh"><img src="images/tw.png"
+                            alt="an image of twitter logo"></a>
+                    <a href="https://www.facebook.com"><img src="images/fb2.png" alt="an image of facebook logo"></a>
+                    <a href="https://www.youtube.com/watch?v=wWLy3TvVPpg"><img src="images/ytube.png"
+                            alt="an image of flickr logo"></a>
+                    <a href="https://www.tumblr.com/"> <img src="images/tumblr.png" alt="image of tumblr icon"
+                            hspace="7"></a>
+                    <a href="https://www.pinterest.com/igichuru/"><img src="images/pin.png"
+                            alt="an image of pinterest logo"></a>
+                </div>
+            </div>
+            <div class="container branches" class="contact" id="contact">
+                <h1 class="text-center"> Contact Us </h1>
+                <p>PIZZA POINT</p>
+                <p>Donholm Towers</p>
+                <p>City Mall</p>
+                <h5>NAIROBI:</h5>
+            </div>
+            <div class="footer-text">
+                <p>PIZZA POINT</p>
+                <p>2019</p>
+        </section>
+
+
+
+
+
+
 
 
 
