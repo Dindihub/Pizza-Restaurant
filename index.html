@@ -14,8 +14,7 @@
     <header class="row">
         <h1 class="col-md-6" id="pizza-point">PIZZA POINT</h1>
         <nav class="col-md-6" class="position-absolute top-0 end-0">
-            <!-- <span class="navbar-brand navbar-text"> <a href="#"></a>Call us 075000000.</span> -->
-           <ul class="nav justify-content-end">
+            <ul class="nav justify-content-end">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
@@ -31,28 +30,14 @@
 
     <main class="main">
         <section class="cover-page">
-            <form action="" id="form"> 
-                <div class="content-cover text-center">
-                    <h1 id="order">We Are Crazy About Pizza!</h1>
-                    <h3 id="order-paragraph">Get your Favourite Pizza Delivered in 30 minutes!</h3>
-                </div>
-                <div>
-                    <select type="dropdown" name="delivery" id="dropdown" class="form-control mb-2">
-                        <option disabled selected value="delivery">Delivery </option>
-                        <option value="Pick-up">Pick-up</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label name="address" id="Address" class="form-control">
-                    <input type="text" placeholder="location">
-                    </label>
-                </div>
-            </form>
+            <div class="content-cover text-center">
+                <h1 id="order">We Are Crazy About Pizza!</h1>
+                <h3 id="order-paragraph">Get your Favourite Pizza Delivered in 30 minutes!</h3>
+                <button class="order-btn"><a class="btn btn-orange button floater" href="#order"> Order Now!</a></button>
+            </div>
         </section>
 
-        <section id="menu">
-            <h1 class="text-center" id="menu-id">Menu</h1>
+        <section id="menu"><h1 class="text-center" id="menu-id">Menu</h1>
             <div class="card-group">
                 <div class="card">
                     <img src="Images/pexels-krisp-cut-1653877.jpg" class="card-img-top" alt="pic">
@@ -60,18 +45,12 @@
                         <h5 class="card-title">Barbecue specials </h5>
                         <p class="card-text">Enjoy Chicken,Beef and Pork toppings </p>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted"> KSH 1500</small>
-                    </div>
                 </div>
                 <div class="card">
                     <img src="Images/pexels-pixabay-263041.jpg" class="card-img-top" alt="pic">
                     <div class="card-body">
                         <h5 class="card-title">Vegan Pizza </h5>
-                        <p class="card-text">A sortee' of vegetable toppings of your choice </p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">KSH 1000</small>
+                        <p class="card-text">A sortee' of green vegetables of your choice </p>
                     </div>
                 </div>
                 <div class="card">
@@ -80,16 +59,62 @@
                         <h5 class="card-title">Megamix</h5>
                         <p class="card-text"> A delicious combo of meat and vegetable toppings of your choice </p>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">KSH 1200</small>
-                    </div>
                 </div>
             </div>
-        </section>
 
-        <section id="contact" class="contact">
-          <h1 class="text-center"> Contact Us </h1>
-          <h3> </h3>
+       <div class="container-fluid order" id="make-order" id="Order">
+                <div class="order-overlay">
+                  <div class="controls-top text-center">
+                      <h2>Order Here</h2>
+                    <h2>Order your pizza here and we will deliver to your door step!</h2>
+                 </div>
+                    
+                   <div class="row">
+                      <div class="col-sm-5">
+                        <form action="">
+                            <label for="select">Select Your Flavor</label><br>
+                            <select class="browser-default custom-select custom-select-md mb-3 name">
+                              <option value="Chicken Tikka">Barbebue Specials</option>
+                              <option value="PeriPeri Pizza">Vegetable specials</option>
+                              <option value="Raspberry Dessert Pizza">Megamix specials</option>
+                            </select><br>
+                          <label for="select">Select Size</label><br>
+                          <select class="browser-default custom-select custom-select-md mb-3" id="size">
+                            <option selected value="0">Select size here</option>
+                            <option value="large">Large -Ksh. 1500</option>
+                            <option value="medium">Medium -Ksh. 1000</option>
+                            <option value="small">Small -Ksh. 500</option>
+                          </select><br>
+                          <label for="crust">Choose your favorite Crust!</label><br>
+                            <select class="browser-default custom-select custom-select-md mb-3" id="crust">
+                            <option selected value="0">Select your preferred crust!</option>
+                              <option value="Crispy">Crispy -Ksh. 150</option>
+                              <option value="Stuffed">Stuffed - Ksh. 100</option>
+                         </select><br>
+                          <label for="Toppings">Select Your Toppings at sh. 50 each</label><br>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                              <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage" name="toppings">
+                              <label class="custom-control-label" for="Sausage">Chicken</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                              <input type="checkbox" class="custom-control-input" id="Bacon" value="Bacon" name="toppings">
+                              <label class="custom-control-label" for="Bacon">Vegetables</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                              <input type="checkbox" class="custom-control-input" id="Mushrooms" value="Mushrooms" name="toppings">
+                              <label class="custom-control-label" for="Mushrooms">Pineapples</label>
+                            </div>
+                            <br><br>       
+                        </form>
+                    
+    </section>
+            
+
+    
+
+    <section id="contact" class="contact">
+            <h1 class="text-center"> Contact Us </h1>
+            <h3> </h3>
         </section>
 
 
