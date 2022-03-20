@@ -76,8 +76,8 @@ position: center;
 #menu{
 background-color:#000;
 width:100vw;
-height:fit-content;
 color:white;
+padding-bottom: 3em;
 }
 
 #menu-id{
@@ -135,4 +135,14 @@ color:white;
     height:fit-content;
     background-color:orange;
     color: black;
+}
+
+.links > a > img {
+    height: 50px !important;
+}
+
+.order-summary.table {
+    background-color: #fff;
+    /* margin-bottom: 2em!important; */
+    display: none;
 }
