@@ -1,13 +1,17 @@
 (function () {
 
-    class Pizza {
-        constructor(name = '', size = {}, crust = {}, topping = {}, orders = 1) {
-            this.name = name;
-            this.size = size;
-            this.crust = crust;
-            this.topping = topping;
-            this.orders = parseInt(orders)
-        }
+    // Method 
+    function Pizza (name = '', size = {}, crust = {}, topping = {}, orders = 1) {
+        this.name = name;
+        this.size = size;
+        this.crust = crust;
+        this.topping = topping;
+        this.orders = parseInt(orders);
+    };
+
+    // Using prototype property to add getTotal function to Pizza Constructor function
+    Pizza.prototype.getTotal = function() {
+        return (this.size.price + this.crust.price + this.topping.price) * this.orders;
     };
 
     let pizzaSizes = [
@@ -132,6 +136,7 @@
     // Listening for form submission
     document.getElementById('order-forms').addEventListener('submit', (e) => {
         e.preventDefault();
+        // JavaScript Form Validation
         if(
             pizzaCrustInput.value === "" || 
             pizzaSizeInput.value === "" || 
@@ -150,6 +155,8 @@
 
         console.log(`Pizza:`);
         console.log(pizza);
+        console.log(pizza.getTotal());
+        alert(pizza.getTotal() + ''+"Customer here is your Bill");
     });
 
 }());
