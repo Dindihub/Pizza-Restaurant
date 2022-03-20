@@ -10,12 +10,6 @@ font-size:2rem ;
 background-color: black;
 }
 
-/* .navbar-text{
-    display:flex;
-    justify-content: flex-start;
-    color:white;
-    font-size:2rem;
-} */
 .nav{
 position:fixed;
 display: flex;
@@ -51,17 +45,19 @@ padding: 10%;
 
 #order{ 
 font-size: 4rem;
+color: white;
 }
 
 #order-paragraph{
 font-size:2rem;
+color: white;
 }
 
 .order-btn{ 
 width:400px;
 height: fit-content;
 font-size:1rem;
-font-weight: bold;
+font-weight: 400px;
 background-color:orange;
 border-radius: 1rem;
 margin-top: 3%;
@@ -70,7 +66,7 @@ margin-top: 3%;
 .cover-page{
 width: 100vw;
 height:100vh;
-background-image:url(./background/pexels-bruno-cantuária-774487.jpg) ;
+background-image:url(./background/ivan-torres-MQUqbmszGGM-unsplash.jpg) ;
 background-size: cover;
 display: cover;
 position: center;
