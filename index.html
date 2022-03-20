@@ -71,78 +71,93 @@
                         <h2>Place your pizza order here and we will deliver to your door step!</h2>
                     </div>
 
-                    <div class="row-col-sm-5" id="order-forms">
-                        <form id="order-form">
-                            <label for="select">Select Your Flavor</label><br>
-                            <select id="pizza-name" name="name" class="form-control">
+                    <form class="row-col-sm-5" id="order-forms">
+                        <div id="order-form">
+                            <label for="dropdown">Select Your Flavor</label><br>
+                            <select type="dropdown" id="pizza-name" name="name" class="form-control" required>
+                                <option value="">Choose...</option>
                                 <option value="barbebue specials">Barbebue Specials</option>
                                 <option value="vegetable specials">Vegetable specials</option>
                                 <option value="megamix specials">Megamix specials</option>
                             </select><br>
 
                             <label for="select">Select Size</label><br>
-                            <select id="pizza-size" name="size" class="form-control"></select><br>
-                            <label for="crust">Choose your favorite Crust!</label><br>
+                            <select id="pizza-size" name="size" class="form-control" required>
+                                <option value="">Choose...</option>
+                            </select><br>
 
-                            <select id="pizza-crust" name="crust" class="form-control"></select><br>
+                            <label for="crust">Choose your favorite Crust!</label><br>
+                            <select id="pizza-crust" name="crust" class="form-control" required>
+                                <option value="">Choose...</option>
+                            </select><br>
+
+                            <label for="topping">Choose your favorite Topping!</label><br>
+                            <select id="pizza-topping" name="topping" class="form-control" required>
+                                <option value="">Choose...</option>
+                            </select><br><br>
+
                             <button type="submit">Proceed to delivery option</button>
                             <br><br>
-                        </form>
+                        </div>
 
-                        <form action="" class="form-delivery">
+                        <div action="" class="form-delivery">
                             <label for="Name">Name</label><br>
                             <div>
-                                <input type="text" class="form-input" id="customer-name" value="Your Name"
-                                    name="name-input">
+                                <input type="text" class="form-input" id="customer-name" placeholder="Your Name"
+                                    name="name-input" required>
                             </div><br>
                             <div>
                                 <label for="phonenumber">Phone Number</label><br>
-                                <input type="number" id="phone-number" value="Your Phone Number" class="form-input">
+                                <input type="number" id="phone-number" name="phone-number"
+                                    placeholder="Your Phone Number" class="form-input" required>
                             </div><br>
                             <div>
-                                <label class="order-number-label" for="order" value="NUmber of orders"> Number of
+                                <label class="order-number-label" for="order"> Number of
                                     orders</label><br>
-                                <input type="number" class="form-input" id="order-number" value="Number of orders"
-                                    name="order-number">
+                                <input type="number" class="form-input" id="order-number" v
+                                    placeholder="Number of orders" name="order-number" required>
                             </div><br>
                             <div>
                                 <label for="select"> Delivery Option</label><br>
-                                <select type="select" id="delivery" name="delivery"
-                                    class="form-control">
+                                <select type="select" id="delivery" name="delivery" class="form-control" required>
+                                    <option value="">Choose...</option>
                                     <option value="Delivery option">Delivery</option>
                                     <option value="Pick-up option">Pick-up</option>
                             </div>
-                        </form>
+                        </div>
+                    </form>
+        </section>
+
+        <section>
+            <h1 class="contact-us text-center" id="contact">Contact us</h1>
+            <div class="container-fluid footer">
+                 <div class="row footerItems">
+                    <div class="container links">
+                        <a href="#"><img src="images/tw.png" alt="an image of twitter logo"></a>
+                        <a href="#"><img src="images/fb2.png" alt="an image of facebook logo"></a>
+                        <a href="#"> <img src="images/tumblr.png" alt="image of instagram icon"></a>
+                        <a href="#"><img src="images/pin.png" alt="an image of pinterest logo"></a>
                     </div>
-
-
-        </section>
-
-        <section class="container-fluid footer">
-            <div class="row footerItems">
-                <div class="container links">
-                    <a href="https://twitter.com/porridgelaugh"><img src="images/tw.png"
-                            alt="an image of twitter logo"></a>
-                    <a href="https://www.facebook.com"><img src="images/fb2.png" alt="an image of facebook logo"></a>
-                    <a href="https://www.youtube.com/watch?v=wWLy3TvVPpg"><img src="images/ytube.png"
-                            alt="an image of flickr logo"></a>
-                    <a href="https://www.tumblr.com/"> <img src="images/tumblr.png" alt="image of tumblr icon"
-                            hspace="7"></a>
-                    <a href="https://www.pinterest.com/igichuru/"><img src="images/pin.png"
-                            alt="an image of pinterest logo"></a>
                 </div>
-            </div>
-            <div class="container branches" class="contact" id="contact">
-                <h1 class="text-center"> Contact Us </h1>
-                <p>PIZZA POINT</p>
-                <p>Donholm Towers</p>
-                <p>City Mall</p>
-                <h5>NAIROBI:</h5>
-            </div>
-            <div class="footer-text">
-                <p>PIZZA POINT</p>
-                <p>2019</p>
+                <div class="container branches" class="contact" id="contact">
+                    <h1 class="text-center"> Contact Us </h1>
+                    <p>PIZZA POINT</p>
+                    <p>Donholm Towers</p>
+                    <p>City Mall</p>
+                    <h5>NAIROBI:</h5>
+                </div>
+                <div class="footer-text">
+                    <p>PIZZA POINT</p>
+                    <p>2019</p>
+
+                </div>
         </section>
+
+
+
+
+
+
 
 
 
