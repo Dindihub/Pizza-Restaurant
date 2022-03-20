@@ -63,7 +63,8 @@
         nameInput = document.getElementById('customer-name'),
         phoneNumberInput = document.getElementById('phone-number'),
         orderNumberInput = document.getElementById('order-number'),
-        deliveryInput = document.getElementById('delivery');
+        deliveryInput = document.getElementById('delivery')
+        orderSummaryTable = document.querySelector('.order-summary');
 
     // Populating pizza_sizes in pizza-size select input
     for (let i = 0; i < pizzaSizes.length; i++) {
@@ -133,30 +134,62 @@
         deliveryOption = e.target.value;
     });
 
+    let pizzaOrders = [];
+
     // Listening for form submission
     document.getElementById('order-forms').addEventListener('submit', (e) => {
         e.preventDefault();
         // JavaScript Form Validation
         if(
+            pizzaNameInput.value === "" ||
             pizzaCrustInput.value === "" || 
             pizzaSizeInput.value === "" || 
             pizzaToppingInput.value === "" ||
-            nameInput.value === "" ||
-            pizzaNameInput.value === "" ||
-            phoneNumberInput.value === "" ||
-            orderNumberInput.value === "" ||
-            deliveryInput.value === ""
+            orderNumberInput.value === ""
+            // nameInput.value === "" ||
+            // pizzaNameInput.value === "" ||
+            // phoneNumberInput.value === "" ||
+            // deliveryInput.value === ""
         ) {
             alert("Please fill all the fields !");
         }
 
         // create a pizza object using pizza class
         let pizza = new Pizza(pizzaName, pizzaSize, pizzaCrust, pizzaTopping, orders);
+        pizzaOrders.push(pizza);
 
-        console.log(`Pizza:`);
-        console.log(pizza);
-        console.log(pizza.getTotal());
-        alert(pizza.getTotal() + ''+"Customer here is your Bill");
+        // clear input fields
+        clearInputFields();
+
+        // Displaying Order Summary Table
+        orderSummaryTable.style.display = "table";
+
+        insertRows();
     });
+
+    // Clearing input fields
+    function clearInputFields() {
+        pizzaNameInput.value = "";
+        pizzaCrustInput.value = ""; 
+        pizzaSizeInput.value = ""; 
+        pizzaToppingInput.value = "";
+        orderNumberInput.value = "";
+    }
+
+    // Inserting each element of pizza orders elements into order summary table
+    function insertRows () {
+        let rows = '';
+        pizzaOrders.map((pizza) => {
+            rows += `<tr>
+                <td>${pizza.name}</td>
+                <td>${pizza.size.type}</td>
+                <td>${pizza.crust.type}</td>
+                <td>${pizza.topping.type}</td>
+                <td>${pizza.orders}</td>
+                <td>${pizza.getTotal()}</td>
+            </tr>`;
+        });
+        document.getElementById('table-body').innerHTML = rows;
+    }
 
 }());
