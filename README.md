@@ -13,7 +13,7 @@ This is website for a Pizza Restaurant with a simple design with inviting visual
 Click [Pizza Point Link]() to navigate to site
 
 ## Screenshot
-![Pizza point Restaurant](Images/Restaurantscreenshot (2).png)
+![Pizza point Restaurant](Images/Restaurantscreenshot(2).png)
 ## Known bugs
 The page may not be responsive on small devices
 ## Technologies used
