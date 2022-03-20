@@ -13,7 +13,7 @@ This is website for a Pizza Restaurant with a simple design with inviting visual
 Click [Pizza Point Link]() to navigate to site
 
 ## Screenshot
-![Delani studio](Images/restaurantscreenshot.png)
+![Delani studio](Images/Restaurantscreenshot (2).png)
 ## Known bugs
 The page may not be responsive on small devices
 ## Technologies used
