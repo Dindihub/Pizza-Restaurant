@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <title>PIZZA RESTAURANT</title>
 </head>
 
@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid order" id="make-order" id="Order">
+            <div class="container order" id="make-order" id="Order">
                 <div class="order-overlay">
                     <div class="controls-top text-center">
                         <h2>Order Here</h2>
@@ -82,7 +82,7 @@
                                 <option value="barbebue specials">Barbebue Specials</option>
                                 <option value="vegetable specials">Vegetable specials</option>
                                 <option value="megamix specials">Megamix specials</option>
-                                
+
                             </select><br>
 
                             <label for="select">Select Size</label><br>
@@ -98,9 +98,14 @@
                             <label for="topping">Choose your favorite Topping!</label><br>
                             <select id="pizza-topping" name="topping" class="form-control" required>
                                 <option value="">Choose...</option>
-                            </select><br><br>
-
-                            <button type="submit" id="delivery-btn">Click here to get Your Total charge</button>
+                            </select><br>
+                            <div>
+                                <label class="order-number-label" for="order"> Number of
+                                    orders</label><br>
+                                <input type="number" class="form-input" id="order-number" placeholder="Number of orders"
+                                    name="order-number" required>
+                            </div><br>
+                            <button type="submit" id="delivery-btn">Add To Cart</button>
                             <br><br>
                         </div>
 
@@ -108,32 +113,60 @@
                             <label for="Name">Name</label><br>
                             <div>
                                 <input type="text" class="form-input" id="customer-name" placeholder="Your Name"
-                                    name="name-input" required>
-                            </div><br>
-                            <div>
-                                <label for="phonenumber">Phone Number</label><br>
-                                <input type="number" id="phone-number" name="phone-number"
-                                    placeholder="Your Phone Number" class="form-input" required>
-                            </div><br>
-                            <div>
-                                <label class="order-number-label" for="order"> Number of
-                                    orders</label><br>
-                                <input type="number" class="form-input" id="order-number" v
-                                    placeholder="Number of orders" name="order-number" required>
+                                    name="name-input">
                             </div><br>
                             <div>
                                 <label for="select"> Delivery Option</label><br>
-                                <select type="select" id="delivery" name="delivery" class="form-control" required>
+                                <select type="select" id="delivery" name="delivery" class="form-control">
                                     <option value="">Choose...</option>
                                     <option value="Delivery option">Delivery</option>
                                     <option value="Pick-up option">Pick-up</option>
                             </div>
+                            <br>
+
+                            <label for="location">Location</label><br>
+                            <div>
+                                <input type="text" class="form-input mt-4" id="customer-name"
+                                    placeholder="Your Location" name="location-input">
+                            </div><br>
+                            <div>
+                                <label for="phonenumber">Phone Number</label><br>
+                                <input type="number" id="phone-number" name="phone-number"
+                                    placeholder="Your Phone Number" class="form-input">
+                            </div><br>
+
+
                         </div>
                     </form>
-        </section>
-</main>
 
-<!-- <footer class="contact-us text-center" id="contact">
+                    <div class="row-col-sm-5">
+                        <table class="order-summary table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Pizza Name</th>
+                                <th scope="col">Size</th>
+                                <th scope="col">Crust</th>
+                                <th scope="col">Topping</th>
+                                <th scope="col">No. of Orders</th>
+                                <th scope="col">Total</th>
+                              </tr>
+                            </thead>
+                            <tbody id="table-body">
+                              <tr>
+                                <td>Pizza Periperi</td>
+                                <td>Large</td>
+                                <td>Crispy</td>
+                                <td>Vegetable</td>
+                                <td>5</td>
+                                <td>23400</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+        </section>
+    </main>
+
+    <footer class="contact-us text-center" id="contact">
     <h1 >Contact us</h1>
     <div class="container-footer">
          <div class="row footerItems">
@@ -155,8 +188,8 @@
             <p>PIZZA POINT</p>
             <p>2019</p>
         </div>
-    </footer>  -->
- <script src="JS/script.js"></script>
+    </footer> 
+    <script src="JS/script.js"></script>
 </body>
 
 
