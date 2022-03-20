@@ -6,37 +6,37 @@
             this.size = size;
             this.crust = crust;
             this.topping = topping;
-            this.orders = 1
+            this.orders = parseInt(orders)
         }
     };
 
-    let pizza_sizes = [
+    let pizzaSizes = [
         {
             type: 'Large',
-            price: '1500'
+            price: 1500
         },
         {
             type: 'Medium',
-            price: '1000'
+            price: 1000
         },
         {
             type: 'Small',
-            price: '500'
+            price: 500
         }
     ];
 
-    let pizza_crusts = [
+    let pizzaCrusts = [
         {
             type: 'Crispy',
-            price: '150'
+            price: 150
         },
         {
             type: 'Stuffed',
-            price: '100'
+            price: 100
         }
     ];
 
-    let pizza_toppings = [
+    let pizzaToppings = [
         {
             type: 'Vegetables',
             price: 50
@@ -52,66 +52,104 @@
     ];
 
     // Inputs 
-    let pizza_size_input = document.getElementById('pizza-size'), 
-        pizza_crust_input = document.getElementById('pizza-crust')
-        pizza_topping_input = document.getElementById('pizza-topping');
+    let pizzaSizeInput = document.getElementById('pizza-size'), 
+        pizzaCrustInput = document.getElementById('pizza-crust')
+        pizzaToppingInput = document.getElementById('pizza-topping'),
+        pizzaNameInput = document.getElementById('pizza-name'),
+        nameInput = document.getElementById('customer-name'),
+        phoneNumberInput = document.getElementById('phone-number'),
+        orderNumberInput = document.getElementById('order-number'),
+        deliveryInput = document.getElementById('delivery');
 
     // Populating pizza_sizes in pizza-size select input
-    for (let i = 0; i < pizza_sizes.length; i++) {
+    for (let i = 0; i < pizzaSizes.length; i++) {
         let el = document.createElement("option");
-        el.textContent = `${pizza_sizes[i].type} - Ksh. ${pizza_sizes[i].price}`;
-        el.value = pizza_sizes[i].type;
-        pizza_size_input.appendChild(el);
+        el.textContent = `${pizzaSizes[i].type} - Ksh. ${pizzaSizes[i].price}`;
+        el.value = pizzaSizes[i].type;
+        pizzaSizeInput.appendChild(el);
     }
 
     // Populating pizza_crusts in pizza-crust select input
-    for (let i = 0; i < pizza_crusts.length; i++) {
+    for (let i = 0; i < pizzaCrusts.length; i++) {
         let el = document.createElement("option");
-        el.textContent = `${pizza_crusts[i].type} - Ksh. ${pizza_crusts[i].price}`;
-        el.value = pizza_crusts[i].type;
-        pizza_crust_input.appendChild(el);
+        el.textContent = `${pizzaCrusts[i].type} - Ksh. ${pizzaCrusts[i].price}`;
+        el.value = pizzaCrusts[i].type;
+        pizzaCrustInput.appendChild(el);
     }
 
     // Populating pizza_toppings in pizza-topping select input
-    for (let i = 0; i < pizza_toppings.length; i++) {
+    for (let i = 0; i < pizzaToppings.length; i++) {
         let el = document.createElement("option");
-        el.textContent = `${pizza_toppings[i].type} - Ksh. ${pizza_toppings[i].price}`;
-        el.value = pizza_toppings[i].type;
-        pizza_topping_input.appendChild(el);
+        el.textContent = `${pizzaToppings[i].type} - Ksh. ${pizzaToppings[i].price}`;
+        el.value = pizzaToppings[i].type;
+        pizzaToppingInput.appendChild(el);
     }
 
-    let pizza_name = '', 
-        pizza_crust = {}, 
-        pizza_topping = {}, 
-        pizza_size = {};
+    let pizzaName = '', 
+        pizzaCrust = {}, 
+        pizzaTopping = {}, 
+        pizzaSize = {},
+        customerName = '',
+        customerPhoneNumber = '',
+        orders = 0,
+        deliveryOption = '';
 
-    document.getElementById('pizza-name').addEventListener('change', (e) => {
-        pizza_name = e.target.value;
+    pizzaNameInput.addEventListener('change', (e) => {
+        pizzaName = e.target.value;
     });
 
-    pizza_size_input.addEventListener('change', e => {
-        let obj = pizza_sizes.find((size) => size.type === e.target.value);
-        pizza_size = obj;
+    pizzaSizeInput.addEventListener('change', e => {
+        let obj = pizzaSizes.find((size) => size.type === e.target.value);
+        pizzaSize = obj;
     });
 
-    pizza_crust_input.addEventListener('change', e => {
-        let obj = pizza_crusts.find((crust) => crust.type === e.target.value);
-        pizza_crust = obj;
+    pizzaCrustInput.addEventListener('change', e => {
+        let obj = pizzaCrusts.find((crust) => crust.type === e.target.value);
+        pizzaCrust = obj;
     });
 
-    pizza_topping_input.addEventListener('change', e => {
-        let obj = pizza_toppings.find((topping) => topping.type === e.target.value);
-        pizza_topping = obj;
+    pizzaToppingInput.addEventListener('change', e => {
+        let obj = pizzaToppings.find((topping) => topping.type === e.target.value);
+        pizzaTopping = obj;
+    });
+
+    nameInput.addEventListener('change', e => {
+        customerName = e.target.value;
+    });
+
+    phoneNumberInput.addEventListener('change', e => {
+        customerPhoneNumber = e.target.value;
+    });
+
+    orderNumberInput.addEventListener('change', e => {
+        orders = e.target.value;
+    });
+
+    deliveryInput.addEventListener('change', e => {
+        deliveryOption = e.target.value;
     });
 
     // Listening for form submission
-    document.getElementById('order-form').addEventListener('submit', (e) => {
+    document.getElementById('order-forms').addEventListener('submit', (e) => {
         e.preventDefault();
-        console.log(`Pizza Name: ${JSON.stringify(pizza_name)}`);
-        console.log(`Pizza Size: ${JSON.stringify(pizza_size)}`);
-        console.log(`Pizza Crust: ${JSON.stringify(pizza_crust)}`);
-        console.log(`Pizza Topping: ${JSON.stringify(pizza_topping)}`);
-        alert('Form Submitted !');
+        if(
+            pizzaCrustInput.value === "" || 
+            pizzaSizeInput.value === "" || 
+            pizzaToppingInput.value === "" ||
+            nameInput.value === "" ||
+            pizzaNameInput.value === "" ||
+            phoneNumberInput.value === "" ||
+            orderNumberInput.value === "" ||
+            deliveryInput.value === ""
+        ) {
+            alert("Please fill all the fields !");
+        }
+
+        // create a pizza object using pizza class
+        let pizza = new Pizza(pizzaName, pizzaSize, pizzaCrust, pizzaTopping, orders);
+
+        console.log(`Pizza:`);
+        console.log(pizza);
     });
 
 }());
