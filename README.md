@@ -10,7 +10,7 @@ This is website for a Pizza Restaurant with a simple design with inviting visual
 *
 ## Live
 
-Click [Pizza Point Link]() to navigate to site
+Click [Pizza Point Link](https://dindihub.github.io/Pizza-Restaurant/) to navigate to site
 
 ## Screenshot
 ![Pizza point](Images/restaurantscreenshot.png)
